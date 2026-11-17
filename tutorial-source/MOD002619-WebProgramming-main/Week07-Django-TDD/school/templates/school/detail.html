@@ -1,0 +1,1 @@
+{% extends 'school/base.html' %}{% block content %}<p class="eyebrow">Saved fingerprint</p><h1>Your SHA-256 hash.</h1><h2>Hash</h2><p class="result">{{ entry.hash }}</p><h2>Text</h2><pre style="white-space:pre-wrap;overflow-wrap:anywhere">{{ entry.text }}</pre><a class="button" href="/">Hash more text</a>{% endblock %}

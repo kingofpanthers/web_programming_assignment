@@ -1,0 +1,1 @@
+{% extends 'school/base.html' %}{% block content %}<p class="eyebrow">Student records</p><h1>Edit {{ student.firstName }}’s profile.</h1><form method="post" enctype="multipart/form-data">{% csrf_token %}{{ form.as_p }}<button>Save changes</button> <a href="{% url 'detail' student.pk %}">Cancel</a></form>{% endblock %}
