@@ -1,6 +1,6 @@
 # Web programming — week by week
 
-Open **index.html** for the seven-week project collection. Runnable files are directly inside their matching named tutorial folders under `tutorial-source/MOD002619-WebProgramming-main/`. Weeks 01–02 work directly in a browser; weeks 03–07 are independent Django projects with their own databases and guides.
+Open **index.html** for the seven-week project collection. Runnable files are directly inside their matching named tutorial folders under `tutorial-source/MOD002619-WebProgramming-main/`. Weeks 01–02 work directly in a browser; weeks 03–07 are independent Django projects with their own databases.
 
 ## Setup (PowerShell)
 
@@ -33,7 +33,7 @@ These local demonstration accounts have been created in the five existing Django
 
 If you start a week with the default `runserver` command, use http://127.0.0.1:8000/admin/ instead. Weeks 1 and 2 have no Django admin.
 
-These accounts belong to the existing local databases. After creating a fresh database, run `python manage.py createsuperuser` from that week folder and choose your credentials. Demo credentials are for local assignment review only.
+These accounts belong to the existing local databases. After creating a fresh database, run `python manage.py createsuperuser` from that week folder and choose your credentials. Demo credentials are for local use only.
 
 ## Folder layout
 
@@ -48,7 +48,7 @@ tutorial-source/MOD002619-WebProgramming-main/
   Week07-Django-TDD/
 ```
 
-Each named tutorial folder contains its runnable project and supplied resources. Weekly worksheets and weekly READMEs were removed at your request; use this main README for setup. Open `index.html` in Week01 or Week02 for browser exercises; run `manage.py` directly from each Django week folder.
+Each named tutorial folder contains its runnable project and supplied resources. Open `index.html` in Week01 or Week02 for browser exercises; run `manage.py` directly from each Django week folder.
 
 ## Organisation
 
@@ -59,19 +59,14 @@ Each named tutorial folder contains its runnable project and supplied resources.
 - week05: student images, static files and pagination.
 - week06: validated student editing, image uploads, module and name/age filtering, retained pagination filters.
 - week07: SHA-256 form, saved hashes, asynchronous preview and tests.
-- tutorial-source: supplied images/code, with runnable files directly in each matching tutorial folder. Weekly Markdown documents have been removed.
+- tutorial-source: supplied images/code, with runnable files directly in each matching tutorial folder.
 
-## Verification and differences
+## Tests and dependencies
 
 Run `python manage.py test` from each Django week. Week 07 includes optional Selenium browser tests: install Selenium, ensure Chrome is available, and run `python manage.py test school.browser_tests`. These require browser/driver availability and are separate from the default test suite.
 
-The supplied archive omits students.csv, so student CSVs here contain synthetic example records. Original responsive CSS replaces the optional Bootstrap/crispy-forms presentation; native Django forms and ORM filters replace django-filter. Python 3.11 uses Django 5.2 rather than the worksheet's Django 6.0 examples. Browser debugger screenshots and red/green TDD history are not claimed: capture debugger evidence yourself using browser DevTools breakpoints, stepping and variable inspection. External tutorial links have not been completed on your behalf.
+Student CSVs contain synthetic example records because students.csv was not included in the supplied archive. The projects use original responsive CSS, native Django forms and ORM filters. Python 3.11 uses Django 5.2.
 
-## Submission notes
-
-Edit the files in the week folders directly. The one-off project and test generators have been removed; they are not needed to run the projects or tests.
-
-Keep the migrations, sample CSVs, static assets, templates and requirements files. Keep any database or uploaded media containing work you want to show. Do not include the local `.venv` folder or Python caches in your submission ZIP; the lecturer can recreate the environment using the setup commands above.
 
 The optional browser test requires `python -m pip install selenium` and Chrome. The regular Django tests do not need Selenium.
 

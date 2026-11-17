@@ -1,6 +1,6 @@
 # Web programming projects
 
-Weekly Markdown worksheets and READMEs have been removed. See the [main setup instructions](../../README.md).
+See the [project README](../../README.md) for installation and login details.
 
 - [Week 01: HTML-CSS](Week01-HTML-CSS/index.html)
 - [Week 02: JavaScript](Week02-JavaScript/index.html)
